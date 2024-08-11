@@ -19,6 +19,15 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'dymamic.info-grid-section',
         'dymamic.banner',
         'dymamic.centered-content-with-image-section',
+        'dymamic.text-section',
+        'dymamic.image-quote-section',
+        'dymamic.contact-info-grid-section',
+        'dymamic.column-info-section',
+        'dymamic.benefits-list-section',
+        'dymamic.accordion-info-section',
+        'dymamic.button-grid-section',
+        'dymamic.headline',
+        'dymamic.hero-with-image-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
