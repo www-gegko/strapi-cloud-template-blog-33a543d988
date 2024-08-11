@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_dymamic_accordion_info_sections",
+  "info": {
+    "displayName": "AccordionInfoSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

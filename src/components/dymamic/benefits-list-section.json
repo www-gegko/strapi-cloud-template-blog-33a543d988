@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_dymamic_benefits_list_sections",
+  "info": {
+    "displayName": "BenefitsListSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "single.benefit-list-section-item"
+    }
+  }
+}

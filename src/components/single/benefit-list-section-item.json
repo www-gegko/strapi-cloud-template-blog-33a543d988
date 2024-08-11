@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_single_benefit_list_section_items",
+  "info": {
+    "displayName": "BenefitListSectionItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

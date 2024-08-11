@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_dymamic_image_quote_sections",
+  "info": {
+    "displayName": "ImageQuoteSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
