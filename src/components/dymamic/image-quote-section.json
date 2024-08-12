@@ -9,10 +9,18 @@
     "title": {
       "type": "string"
     },
-    "items": {
-      "type": "component",
-      "repeatable": true,
-      "component": "single.image-quote-section-item"
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "text": {
+      "type": "richtext"
     }
   }
 }

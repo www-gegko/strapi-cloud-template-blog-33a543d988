@@ -100,7 +100,8 @@ export interface DymamicImageQuoteSection extends Struct.ComponentSchema {
   };
   attributes: {
     title: Schema.Attribute.String;
-    items: Schema.Attribute.Component<'single.image-quote-section-item', true>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.RichText;
   };
 }
 
