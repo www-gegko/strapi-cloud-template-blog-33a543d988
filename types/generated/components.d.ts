@@ -198,12 +198,10 @@ export interface DymamicBanner extends Struct.ComponentSchema {
     description: '';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
-    imageMobile: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
   };
 }
 
