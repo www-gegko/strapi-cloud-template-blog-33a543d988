@@ -11,6 +11,18 @@ export interface SingleInfoGridSectionItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SingleImageQuoteSectionItem extends Struct.ComponentSchema {
+  collectionName: 'components_single_image_quote_section_items';
+  info: {
+    displayName: 'ImageQuoteSectionItem';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.RichText;
+  };
+}
+
 export interface SingleContactInfoGridSectionItem
   extends Struct.ComponentSchema {
   collectionName: 'components_single_contact_info_grid_section_items';
@@ -84,11 +96,11 @@ export interface DymamicImageQuoteSection extends Struct.ComponentSchema {
   collectionName: 'components_dymamic_image_quote_sections';
   info: {
     displayName: 'ImageQuoteSection';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
-    text: Schema.Attribute.RichText;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    items: Schema.Attribute.Component<'single.image-quote-section-item', true>;
   };
 }
 
@@ -205,6 +217,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'single.info-grid-section-item': SingleInfoGridSectionItem;
+      'single.image-quote-section-item': SingleImageQuoteSectionItem;
       'single.contact-info-grid-section-item': SingleContactInfoGridSectionItem;
       'single.column-info-section-item': SingleColumnInfoSectionItem;
       'single.button-grid-section-item': SingleButtonGridSectionItem;
