@@ -85,12 +85,16 @@ export interface SingleAccordionInfoSectionItem extends Struct.ComponentSchema {
   collectionName: 'components_single_accordion_info_section_items';
   info: {
     displayName: 'AccordionInfoSectionItem';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
     text: Schema.Attribute.RichText;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    color: Schema.Attribute.Enumeration<
+      ['bg-hellblau', 'bg-mittelblau', 'bg-blau']
+    >;
   };
 }
 

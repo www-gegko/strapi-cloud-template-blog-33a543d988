@@ -1,7 +1,8 @@
 {
   "collectionName": "components_single_accordion_info_section_items",
   "info": {
-    "displayName": "AccordionInfoSectionItem"
+    "displayName": "AccordionInfoSectionItem",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -15,14 +16,23 @@
       "type": "richtext"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "bg-hellblau",
+        "bg-mittelblau",
+        "bg-blau"
+      ]
     }
   }
 }
