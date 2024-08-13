@@ -94,7 +94,8 @@ export interface SingleAccordionInfoSectionItem extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     color: Schema.Attribute.Enumeration<
       ['bg-hellblau', 'bg-mittelblau', 'bg-blau']
-    >;
+    > &
+      Schema.Attribute.Required;
   };
 }
 
