@@ -17,11 +17,8 @@
         "audios"
       ]
     },
-    "title": {
-      "type": "string"
-    },
-    "subtitle": {
-      "type": "string"
+    "text": {
+      "type": "richtext"
     }
   }
 }
