@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_single_column_info_section_items",
+  "info": {
+    "displayName": "ColumnInfoSectionItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

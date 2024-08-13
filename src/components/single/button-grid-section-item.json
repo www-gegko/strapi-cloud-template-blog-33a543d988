@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_single_button_grid_section_items",
+  "info": {
+    "displayName": "ButtonGridSectionItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

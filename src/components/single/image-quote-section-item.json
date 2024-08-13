@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_single_image_quote_section_items",
+  "info": {
+    "displayName": "ImageQuoteSectionItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,20 +1,5 @@
 {
-  "dependencies": {
-    "@strapi/plugin-graphql": "^4.0.5",
-    "fs-extra": "^10.0.0",
-    "lodash.set": "^4.3.2",
-    "mime-types": "^2.1.27",
-    "@strapi/strapi": "4.21.1",
-    "@strapi/plugin-users-permissions": "4.21.1",
-    "@strapi/plugin-i18n": "4.21.1",
-    "@strapi/plugin-cloud": "4.21.1",
-    "better-sqlite3": "8.6.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "5.3.4",
-    "styled-components": "5.3.3"
-  },
-  "name": "my-app-name",
+  "name": "gegko",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -22,14 +7,31 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "deploy": "strapi deploy"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "5.0.0-rc.9",
+    "@strapi/plugin-users-permissions": "5.0.0-rc.9",
+    "@strapi/strapi": "5.0.0-rc.9",
+    "better-sqlite3": "9.4.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "strapi-plugin-populate-deep": "^3.0.1",
+    "styled-components": "^6.0.0"
+  },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "template": "blog"
+    "uuid": "790e440d-172d-45c8-9767-88957ad70f39"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",

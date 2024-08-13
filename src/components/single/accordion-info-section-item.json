@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_single_accordion_info_section_items",
+  "info": {
+    "displayName": "AccordionInfoSectionItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "bg-hellblau",
+        "bg-mittelblau",
+        "bg-blau"
+      ],
+      "required": true
+    }
+  }
+}

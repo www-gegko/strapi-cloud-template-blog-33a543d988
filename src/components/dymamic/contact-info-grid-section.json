@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_dymamic_contact_info_grid_sections",
+  "info": {
+    "displayName": "ContactInfoGridSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "single.contact-info-grid-section-item"
+    }
+  }
+}

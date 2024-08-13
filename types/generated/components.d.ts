@@ -1,75 +1,278 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Struct, Schema } from '@strapi/strapi';
 
-export interface SharedMedia extends Schema.Component {
-  collectionName: 'components_shared_media';
+export interface SingleInfoGridSectionItem extends Struct.ComponentSchema {
+  collectionName: 'components_single_info_grid_section_items';
   info: {
-    displayName: 'Media';
-    icon: 'file-video';
+    displayName: 'InfoGridSectionItem';
   };
   attributes: {
-    file: Attribute.Media;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.RichText;
   };
 }
 
-export interface SharedQuote extends Schema.Component {
-  collectionName: 'components_shared_quotes';
+export interface SingleImageQuoteSectionItem extends Struct.ComponentSchema {
+  collectionName: 'components_single_image_quote_section_items';
   info: {
-    displayName: 'Quote';
-    icon: 'indent';
+    displayName: 'ImageQuoteSectionItem';
   };
   attributes: {
-    title: Attribute.String;
-    body: Attribute.Text;
+    title: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.RichText;
   };
 }
 
-export interface SharedRichText extends Schema.Component {
-  collectionName: 'components_shared_rich_texts';
+export interface SingleFooterMenu extends Struct.ComponentSchema {
+  collectionName: 'components_single_footer_menus';
   info: {
-    displayName: 'Rich text';
-    icon: 'align-justify';
+    displayName: 'FooterMenu';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+  };
+}
+
+export interface SingleContactInfoGridSectionItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_single_contact_info_grid_section_items';
+  info: {
+    displayName: 'ContactInfoGridSectionItem';
+  };
+  attributes: {
+    projectManager: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    address: Schema.Attribute.RichText;
+  };
+}
+
+export interface SingleColumnInfoSectionItem extends Struct.ComponentSchema {
+  collectionName: 'components_single_column_info_section_items';
+  info: {
+    displayName: 'ColumnInfoSectionItem';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.RichText;
+  };
+}
+
+export interface SingleButtonGridSectionItem extends Struct.ComponentSchema {
+  collectionName: 'components_single_button_grid_section_items';
+  info: {
+    displayName: 'ButtonGridSectionItem';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+  };
+}
+
+export interface SingleBenefitListSectionItem extends Struct.ComponentSchema {
+  collectionName: 'components_single_benefit_list_section_items';
+  info: {
+    displayName: 'BenefitListSectionItem';
     description: '';
   };
   attributes: {
-    body: Attribute.RichText;
+    text: Schema.Attribute.String;
   };
 }
 
-export interface SharedSeo extends Schema.Component {
-  collectionName: 'components_shared_seos';
+export interface SingleAccordionInfoSectionItem extends Struct.ComponentSchema {
+  collectionName: 'components_single_accordion_info_section_items';
   info: {
-    name: 'Seo';
-    icon: 'allergies';
-    displayName: 'Seo';
+    displayName: 'AccordionInfoSectionItem';
     description: '';
   };
   attributes: {
-    metaTitle: Attribute.String & Attribute.Required;
-    metaDescription: Attribute.Text & Attribute.Required;
-    shareImage: Attribute.Media;
+    title: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    text: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    color: Schema.Attribute.Enumeration<
+      ['bg-hellblau', 'bg-mittelblau', 'bg-blau']
+    > &
+      Schema.Attribute.Required;
   };
 }
 
-export interface SharedSlider extends Schema.Component {
-  collectionName: 'components_shared_sliders';
+export interface DymamicTextSection extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_text_sections';
   info: {
-    displayName: 'Slider';
-    icon: 'address-book';
+    displayName: 'TextSection';
+  };
+  attributes: {
+    text: Schema.Attribute.RichText;
+  };
+}
+
+export interface DymamicInfoGridSection extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_info_grid_sections';
+  info: {
+    displayName: 'InfoGridSection';
     description: '';
   };
   attributes: {
-    files: Attribute.Media;
+    title: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'single.info-grid-section-item', true>;
   };
 }
 
-declare module '@strapi/types' {
-  export module Shared {
-    export interface Components {
-      'shared.media': SharedMedia;
-      'shared.quote': SharedQuote;
-      'shared.rich-text': SharedRichText;
-      'shared.seo': SharedSeo;
-      'shared.slider': SharedSlider;
+export interface DymamicImageQuoteSection extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_image_quote_sections';
+  info: {
+    displayName: 'ImageQuoteSection';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.RichText;
+  };
+}
+
+export interface DymamicHeroWithImageSection extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_hero_with_image_sections';
+  info: {
+    displayName: 'HeroWithImageSection';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface DymamicHeadline extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_headlines';
+  info: {
+    displayName: 'Headline';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+  };
+}
+
+export interface DymamicContactInfoGridSection extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_contact_info_grid_sections';
+  info: {
+    displayName: 'ContactInfoGridSection';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    items: Schema.Attribute.Component<
+      'single.contact-info-grid-section-item',
+      true
+    >;
+  };
+}
+
+export interface DymamicColumnInfoSection extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_column_info_sections';
+  info: {
+    displayName: 'ColumnInfoSection';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'single.column-info-section-item', true>;
+  };
+}
+
+export interface DymamicCenteredContentWithImageSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_centered_content_with_image_sections';
+  info: {
+    displayName: 'CenteredContentWithImageSection';
+  };
+  attributes: {
+    text: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface DymamicButtonGridSection extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_button_grid_sections';
+  info: {
+    displayName: 'ButtonGridSection';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'single.button-grid-section-item', true>;
+    typ: Schema.Attribute.Enumeration<['blue', 'green']> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface DymamicBenefitsListSection extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_benefits_list_sections';
+  info: {
+    displayName: 'BenefitsListSection';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'single.benefit-list-section-item', true>;
+  };
+}
+
+export interface DymamicBanner extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_banners';
+  info: {
+    displayName: 'Banner';
+    description: '';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    text: Schema.Attribute.RichText;
+  };
+}
+
+export interface DymamicAccordionInfoSection extends Struct.ComponentSchema {
+  collectionName: 'components_dymamic_accordion_info_sections';
+  info: {
+    displayName: 'AccordionInfoSection';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    items: Schema.Attribute.Component<
+      'single.accordion-info-section-item',
+      true
+    >;
+  };
+}
+
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
+      'single.info-grid-section-item': SingleInfoGridSectionItem;
+      'single.image-quote-section-item': SingleImageQuoteSectionItem;
+      'single.footer-menu': SingleFooterMenu;
+      'single.contact-info-grid-section-item': SingleContactInfoGridSectionItem;
+      'single.column-info-section-item': SingleColumnInfoSectionItem;
+      'single.button-grid-section-item': SingleButtonGridSectionItem;
+      'single.benefit-list-section-item': SingleBenefitListSectionItem;
+      'single.accordion-info-section-item': SingleAccordionInfoSectionItem;
+      'dymamic.text-section': DymamicTextSection;
+      'dymamic.info-grid-section': DymamicInfoGridSection;
+      'dymamic.image-quote-section': DymamicImageQuoteSection;
+      'dymamic.hero-with-image-section': DymamicHeroWithImageSection;
+      'dymamic.headline': DymamicHeadline;
+      'dymamic.contact-info-grid-section': DymamicContactInfoGridSection;
+      'dymamic.column-info-section': DymamicColumnInfoSection;
+      'dymamic.centered-content-with-image-section': DymamicCenteredContentWithImageSection;
+      'dymamic.button-grid-section': DymamicButtonGridSection;
+      'dymamic.benefits-list-section': DymamicBenefitsListSection;
+      'dymamic.banner': DymamicBanner;
+      'dymamic.accordion-info-section': DymamicAccordionInfoSection;
     }
   }
 }

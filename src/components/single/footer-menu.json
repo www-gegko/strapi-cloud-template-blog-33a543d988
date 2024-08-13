@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_single_footer_menus",
+  "info": {
+    "displayName": "FooterMenu"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
