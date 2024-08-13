@@ -23,6 +23,17 @@ export interface SingleImageQuoteSectionItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SingleFooterMenu extends Struct.ComponentSchema {
+  collectionName: 'components_single_footer_menus';
+  info: {
+    displayName: 'FooterMenu';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+  };
+}
+
 export interface SingleContactInfoGridSectionItem
   extends Struct.ComponentSchema {
   collectionName: 'components_single_contact_info_grid_section_items';
@@ -219,6 +230,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'single.info-grid-section-item': SingleInfoGridSectionItem;
       'single.image-quote-section-item': SingleImageQuoteSectionItem;
+      'single.footer-menu': SingleFooterMenu;
       'single.contact-info-grid-section-item': SingleContactInfoGridSectionItem;
       'single.column-info-section-item': SingleColumnInfoSectionItem;
       'single.button-grid-section-item': SingleButtonGridSectionItem;
