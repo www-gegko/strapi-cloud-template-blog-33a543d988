@@ -81,6 +81,19 @@ export interface SingleBenefitListSectionItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SingleAccordionInfoSectionItem extends Struct.ComponentSchema {
+  collectionName: 'components_single_accordion_info_section_items';
+  info: {
+    displayName: 'AccordionInfoSectionItem';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    text: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface DymamicTextSection extends Struct.ComponentSchema {
   collectionName: 'components_dymamic_text_sections';
   info: {
@@ -221,9 +234,14 @@ export interface DymamicAccordionInfoSection extends Struct.ComponentSchema {
   collectionName: 'components_dymamic_accordion_info_sections';
   info: {
     displayName: 'AccordionInfoSection';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
+    items: Schema.Attribute.Component<
+      'single.accordion-info-section-item',
+      true
+    >;
   };
 }
 
@@ -237,6 +255,7 @@ declare module '@strapi/strapi' {
       'single.column-info-section-item': SingleColumnInfoSectionItem;
       'single.button-grid-section-item': SingleButtonGridSectionItem;
       'single.benefit-list-section-item': SingleBenefitListSectionItem;
+      'single.accordion-info-section-item': SingleAccordionInfoSectionItem;
       'dymamic.text-section': DymamicTextSection;
       'dymamic.info-grid-section': DymamicInfoGridSection;
       'dymamic.image-quote-section': DymamicImageQuoteSection;
