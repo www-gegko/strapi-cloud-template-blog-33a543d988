@@ -186,6 +186,8 @@ export interface DymamicButtonGridSection extends Struct.ComponentSchema {
   attributes: {
     title: Schema.Attribute.String;
     items: Schema.Attribute.Component<'single.button-grid-section-item', true>;
+    typ: Schema.Attribute.Enumeration<['blue', 'green']> &
+      Schema.Attribute.Required;
   };
 }
 
