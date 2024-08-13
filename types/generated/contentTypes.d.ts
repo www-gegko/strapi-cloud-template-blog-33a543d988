@@ -451,6 +451,7 @@ export interface ApiMenuMenu extends Struct.CollectionTypeSchema {
     singularName: 'menu';
     pluralName: 'menus';
     displayName: 'Menu';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -459,6 +460,7 @@ export interface ApiMenuMenu extends Struct.CollectionTypeSchema {
     title: Schema.Attribute.String;
     link: Schema.Attribute.String;
     sort: Schema.Attribute.Integer;
+    show: Schema.Attribute.Boolean;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
