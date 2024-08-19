@@ -7,10 +7,7 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "subtitle": {
-      "type": "string"
+      "type": "richtext"
     },
     "items": {
       "type": "component",
