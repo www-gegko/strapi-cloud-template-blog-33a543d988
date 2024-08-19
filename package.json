@@ -17,9 +17,9 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.0.0-rc.10",
-    "@strapi/plugin-users-permissions": "5.0.0-rc.10",
-    "@strapi/strapi": "5.0.0-rc.10",
+    "@strapi/plugin-cloud": "^4.25.8",
+    "@strapi/plugin-users-permissions": "^4.8.1",
+    "@strapi/strapi": "^4.24.5",
     "better-sqlite3": "9.4.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
