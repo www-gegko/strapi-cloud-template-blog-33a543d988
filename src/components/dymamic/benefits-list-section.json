@@ -7,15 +7,20 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "subtitle": {
-      "type": "string"
+      "type": "richtext"
     },
     "items": {
       "type": "component",
       "repeatable": true,
       "component": "single.benefit-list-section-item"
-    }
+    },
+    "typ": {
+      "type": "enumeration",
+      "enum": [
+        "blue",
+        "green"
+      ],
+      "required": true
+    } 
   }
 }
